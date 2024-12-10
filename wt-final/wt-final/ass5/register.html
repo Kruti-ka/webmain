@@ -1,0 +1,54 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    h2{
+        height: 10%;
+        width: 100%;
+        background-color: azure;
+    }
+    form{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: azure;
+    }
+
+    .form_ele{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+</style>
+
+<h2>Registration</h2>
+<form action="register.php" method="post">
+    <div class="form_ele">
+        <label for="fname">Enter First Name : </label>
+        <input type="text" name="fname" id="fname">
+    </div>
+    <div class="form_ele">
+        <label for="lname">Enter Last Name : </label>
+        <input type="text" name="lname" id="lname">
+    </div>
+    <div class="form_ele">
+        <label for="email">Enter Email : </label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div class="form_ele">
+        <label for="dob">Enter DOB : </label>
+        <input type="date" name="dob" id="dob">
+    </div>
+
+    <div class="form_ele">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+   
+</form>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Character Counter</h1>
+  <input type="text" id="inputField" onkeyup="countCharacters()" placeholder="Type something here...">
+  <p>Characters: <span id="charCount">0</span></p>
+
+  <script>
+    function countCharacters() {
+      const inputField = document.getElementById("inputField");
+      const charCountDisplay = document.getElementById("charCount");
+      charCountDisplay.textContent = inputField.value.length;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Tasks</title>
+  <style>
+    .highlight { background-color: yellow; }
+  </style> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p id="myParagraph">This is a paragraph.</p>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <div id="myDiv" class="highlight">This is a div.</div>
+  <input type="text" id="myInput" placeholder="Type something..." oninput="inputToText()">
+  <p id="output"></p>
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="removeItem()">Remove Item</button>
+  <button onclick="toggleClass()">Toggle Class</button>
+  <button onclick="showAlert()">Show Alert</button>
+  <button onclick="hideElement()">Hide Element</button>
+  <button onclick="showElement()">Show Element</button>
+  <button onclick="changeColor()">Change Color</button>
+  <button onclick="incrementCounter()">Increment Counter</button>
+  <p>Counter: <span id="counter">0</span></p>
+
+  <script>
+    function changeText() {
+      document.getElementById("myParagraph").innerText = "New Text";
+    }
+
+    function addItem() {
+      let ul = document.getElementById("myList");
+      let li = document.createElement("li");
+      li.innerText = "New Item";
+      ul.appendChild(li);
+    }
+
+    function removeItem() {
+      let ul = document.getElementById("myList");
+      ul.removeChild(ul.lastChild);
+    }
+
+    function toggleClass() {
+      document.getElementById("myDiv").classList.toggle("highlight");
+    }
+
+    function showAlert() {
+      alert(document.getElementById("myInput").value);
+    }
+
+    function hideElement() {
+      document.getElementById("myDiv").style.display = "none";
+    }
+
+    function showElement() {
+      document.getElementById("myDiv").style.display = "block";
+    }
+
+    function changeColor() {
+      document.getElementById("myDiv").style.backgroundColor = "blue";
+    }
+
+    let counter = 0;
+    function incrementCounter() {
+      counter++;
+      document.getElementById("counter").innerText = counter;
+    }
+
+    function inputToText() {
+      document.getElementById("output").innerText = document.getElementById("myInput").value;
+    }
+  </script>
+</body>
+</html>
+
+

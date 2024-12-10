@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color:rgb(3, 0, 0);
+    }
+
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .box{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        background-color: rgb(241, 36, 0);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    .outer_box{
+        margin: auto;
+        text-align: center;
+        background-color: rgb(241, 36, 0);
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    input{
+        width: 50%;
+        height: 3vh;
+        text-align: center;
+    }
+
+    button{
+        width: 15%;
+        border: 1px solid black;
+        color: black;
+    }
+
+    .list{
+        margin:  10px auto;
+        width:80%;
+        height: auto;
+        background-color: rgb(255, 208, 0);
+        text-align: center;
+        text-align: start;
+    }
+    li{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+    }
+
+</style>
+<body>
+    <div class="outer_box">
+        <h1>My To Do List</h1>
+        <div class="box">
+        <input type="text" name="" id="todo" placeholder="Enter to do here">
+        <button onclick="add()">Add</button>
+        </div>
+    </div>
+    <ul class="list" type="none">
+            
+    </ul>
+    
+    <script>
+        let arr=[];
+        function add(){
+            let ele=document.querySelector("#todo");
+            let x=document.querySelector(".list");
+            let todo=ele.value;
+            arr.push(todo);
+            let lst=document.createElement('li');
+            lst.innerHTML=`<h4>${todo}</h4><button>Delete</button>`;
+            x.appendChild(lst);
+        }
+    </script>
+</body>
+</html>

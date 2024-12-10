@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a:hover {
+    color: #ffdd57;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 100px 20px;
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .hero span {
+    color: #ffdd57;
+  }
+  
+  .hero .btn {
+    background: #ffdd57;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Skills and Projects Grid */
+  .skills-grid, .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .skill, .project-card {
+    padding: 10px 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  .skill {
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .project-card {
+    max-width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contact Form */
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact form input, .contact form textarea, .contact form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact form button {
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .contact form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff;
+  }
+  

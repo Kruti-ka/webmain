@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form</title>
+  <link rel="stylesheet" href="styleb.css">
+</head>
+<body>
+  <br>
+  <h1>HTML FORM</h1>
+  <form action="" method="post">
+    <div class="container">
+      <div class="element">
+        <label for="uname">Enter Username : </label>
+        <input type="text" name="fname" id="uname">
+      </div>
+      <div class="element">
+        <label for="pass">Enter Password : </label>
+        <input type="password" name="pass" id="pass">
+      </div>
+      <div class="element">
+        <label for="age">Enter Age : </label>
+        <input type="number" name="age" id="age">
+      </div>
+      <div class="element">
+        <label for="address">Enter Address : </label><br>
+        <textarea name="address" id="address" rows="5" cols="20"></textarea>
+      </div>
+      <div class="element">
+        <label for="dob">Select DOB : </label>
+        <input type="date" name="dob" id="dob">
+      </div>
+      <div class="element">
+        <label>Select Course : </label>
+        <input type="checkbox" name="java" class="course">Java
+        <input type="checkbox" name="dob" class="course">.net
+        <input type="checkbox" name="dob" class="course">Angular
+        <input type="checkbox" name="dob" class="course">Python
+        <input type="checkbox" name="dob" class="course">React.js
+      </div>
+      <div class="element">
+        <label>Select Gender : </label>
+    <input type="radio" name="male" id="male" checked><label for="male">Male</label>
+    <input type="radio" name="female" id="female"><label for="female">Female</label>
+      </div>
+      <div class="element">
+        <label>Upload pic : </label>
+    <input type="file" name="pic" id="pic">
+
+      </div>
+      <div class="element">
+        <label>Select Qualification : </label>
+    <select name="qualification" class="qualification">
+      <option value="BE">BE</option>
+      <option value="BTech">BTech</option>
+      <option value="MCA">MCA</option>
+      <option value="BSC">BSC</option>
+    </select>
+      </div>
+      <div class="btcontainer">
+        <div class="bt">
+          <input type="submit">
+        </div>
+        <div class="bt">
+          <input type="reset">
+        </div>
+        <div class="bt">
+          <input type="button" value="button">
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List with Edit Feature</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="TodoController">
+
+  <div class="todo-container">
+    <h1>Todo List</h1>
+
+    <div class="input-group">
+      <input type="text" ng-model="newTodo" placeholder="Add a new todo..." />
+      <button ng-click="addTodo()">Add</button>
+    </div>
+
+    <ul class="todo-list">
+      <li ng-repeat="todo in todos">
+        <!-- Edit Mode -->
+        <div ng-if="editIndex === $index">
+          <input type="text" ng-model="todo" class="edit-input" />
+          <button ng-click="saveEdit()">Save</button>
+          <button ng-click="cancelEdit()">Cancel</button>
+        </div>
+
+        <!-- View Mode -->
+        <div ng-if="editIndex !== $index">
+          <span>{{ todo }}</span>
+          <button class="edit-btn" ng-click="enableEdit($index)">Edit</button>
+          <button class="delete-btn" ng-click="deleteTodo($index)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

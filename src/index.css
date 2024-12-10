@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+ul li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+ul li:hover {
+  color: #4CAF50;
+  font-weight: bold;
+}
